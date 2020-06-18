@@ -13,12 +13,9 @@
 <h1>회원가입 페이지</h1>
 </header>
 <hr/>
-<nav>
-	<a href="/apple/member?cmd=loginForm">로그인</a>
-	<a href="/apple/member?cmd=joinForm">회원가입</a>
-</nav>
+<%@include file="../include/nav.jsp" %>
 <section>
-	<form action = "/apple/post?cmd=saveProc" method="post">
+	<form action = "/apple/member?cmd=joinProc" method="post">
 	<table border = "1">
 	
 	<tr>
@@ -27,16 +24,15 @@
 	</tr>
 	<tr>
 		<th>패스워드</th>
-		<td><td><input type = "password" name="password"></td></td>
+		<td><input type = "password" name="password"></td>
 	
 	</tr>
 	<tr>
 		<th>이메일</th>
-		<td><td><input type = "email" name="email"></td></td>
-	
+		<td><input type = "email" name="email"></td>
 	</tr>
 	</table>
-	<button>글쓰기 완료</button>
+	<button>회원가입 완료</button>
 	</form>
 </section>
 <footer>
