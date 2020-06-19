@@ -1,7 +1,10 @@
 package com.cos.apple.model;
 
-import com.sun.jmx.snmp.Timestamp;
 
+import java.sql.Timestamp;
+
+import lombok.Data;
+@Data
 public class Member {
 	private int id;
 	private String username; 
