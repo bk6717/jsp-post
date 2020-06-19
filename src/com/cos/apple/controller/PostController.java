@@ -1,6 +1,7 @@
 package com.cos.apple.controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.cos.apple.action.Action;
 import com.cos.apple.action.post.PostListAction;
+import com.cos.apple.action.post.PostSaveFormAction;
+import com.cos.apple.action.post.PostSaveProcAction;
 
 
 //     http://localhost:8000/apple/post
@@ -43,6 +46,10 @@ public class PostController extends HttpServlet {
 	private Action router(String cmd) {
 		if(cmd.equals("list")) {
 			return new PostListAction();
+		}if(cmd.equals("saveForm")) {
+			return new PostSaveFormAction();
+		}if(cmd.equals("saveProc")) {
+			return new PostSaveProcAction();
 		}
 		return null;
 	}
